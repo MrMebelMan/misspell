@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name='misspell',
-    version='0.2',
+    version='0.3',
     scripts=['misspell/__init__.py'],
     author='Vladyslav Burzakovskyy',
     author_email='mutex-lock@protonmail.com',
