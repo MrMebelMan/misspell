@@ -75,7 +75,7 @@ def make_typo(string: str, unicode: bool=False) -> str:
 
     # check that there are replaceable characters
     found = False
-    for c in set(string):
+    for c in set(string.lower()):
         if c in replace_choices:
             found = True
             break
@@ -91,10 +91,13 @@ def make_typo(string: str, unicode: bool=False) -> str:
             break
 
     ret = list(string)
-    if random_char != char_lower:
-        ret[index] = ret[index].upper() # preserve case
 
     ret[index] = random_choice(replace_choices[random_char.lower()])
+
+    # preserve case
+    if random_char != char_lower:
+        ret[index] = ret[index].upper()
+
     return ''.join(ret)
 
 def make_typos(string: str, percent: (int, float)=5, unicode=False):
