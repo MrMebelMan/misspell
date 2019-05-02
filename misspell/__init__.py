@@ -7,7 +7,7 @@ NEIGHBORS = {
     'b': 'vghn',
     'c': 'xdfv',
     'd': 'wersfxcv',
-    'e': '2345wrsdf',
+    'e': '234wrsdf',
     'f': 'ertdgcvb',
     'g': 'rtyfhvbn',
     'h': 'tyugjbnm',
