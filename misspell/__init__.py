@@ -73,6 +73,15 @@ def make_typo(string: str, unicode: bool=False) -> str:
     replace_choices = ALL_NEIGHBORS if unicode else NEIGHBORS
     string = str(string)
 
+    chance = randint(0, 100)
+    index = randint(0, max(0, len(string) - 1))
+    if chance >= 85 and chance < 95:
+        return string[:index] + string[index+1:]  # erase character
+    elif chance >= 95:
+        return string[:index] + string[index] + string[index:]  # repeat character
+    else:
+        pass  # replace character
+        
     # check that there are replaceable characters
     found = False
     for c in set(string.lower()):
